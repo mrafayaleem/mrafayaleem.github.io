@@ -6,14 +6,14 @@ highlighter:      pygments
 permalink:        pretty
 
 # Setup
-title:            Hyde
-tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://hyde.getpoole.com
+title:            Majnun Engineer
+tagline:          'Majnun Engineer'
+description:      'Currently Software Engineer at <a href="https://dubai.dubizzle.com" target="_blank">dubizzle</a>. Living and enjoying life in Dubai, UAE. Huge nerd who likes playing guitar and is a Clapton fan.</a>'
+url:              http://mrafayaleem.com
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           'Mohammad Rafay Aleem'
+  url:            https://twitter.com/mrafayaleem
 
 paginate:         5
 
@@ -21,7 +21,11 @@ paginate:         5
 version:          2.0.0
 
 github:
-  repo:           https://github.com/poole/hyde
+  repo:           https://github.com/mrafayaleem
+
+social:
+  linkedin:       https://ae.linkedin.com/in/mrafayaleem
+  twitter:        https://twitter.com/mrafayaleem
 
 gems :
   - jekyll-paginate
