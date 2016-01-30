@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Introducing Majnun Engineer
+title: Introducing Uncanny Recursions
 ---
 
-My very first attempt at setting up a personal blog cum website which I am hoping to maintain for a really long time. This is set up using Github pages and a Jekyll theme called Hyde. I have called it Majnun Engineer because of my love for engineering and the fact that I am listening to [Layla](https://soundcloud.com/mrafayaleem/layla-unplugged-guitar-cover) right now.
+My very first attempt at setting up a personal blog cum website which I am hoping to maintain for a really long time. This is set up using Github pages and a Jekyll theme called Hyde.
 
 To know more about me and my work, you can follow me at:
 
