@@ -49,26 +49,26 @@ pt-online-schema-change --dry-run --nocheck-replication-filters --recursion-meth
 
 #### Command options and explanations:
 
-*Note: Some of the description has been copied verbatim from `pt-online-schema-change` <a href=https://www.percona.com/doc/percona-toolkit/2.1/pt-online-schema-change.html#pt-online-schema-change>docs</a> for berevity.*
+*Note: Some of the description has been copied verbatim from [pt-online-schema-change docs](https://www.percona.com/doc/percona-toolkit/2.1/pt-online-schema-change.html#pt-online-schema-change) for berevity.*
 
 **dry-run:** Create and alter the new table, but do not create triggers, copy data, or replace the original table. A safe mechanism to see what actual migration might look like. Note that it cannot reproduce an exact production like migration scenario. Think of it as a mock test.
 
 **nocheck-replication-filters:** Abort if any replication filter is set on any server. The tool looks for server options that filter replication, such as `binlog_ignore_db` and `replicate_do_db`. If it finds any such filters, it aborts with an error.
 
-If the replicas are configured with any filtering options, you should be careful not to modify any databases or tables that exist on the master and not the replicas, because it could cause replication to fail. For more information on replication rules, see <a href=http://dev.mysql.com/doc/en/replication-rules.html target="_blank">http://dev.mysql.com/doc/en/replication-rules.html</a>.
+If the replicas are configured with any filtering options, you should be careful not to modify any databases or tables that exist on the master and not the replicas, because it could cause replication to fail. For more information on replication rules, see [http://dev.mysql.com/doc/en/replication-rules.html target](http://dev.mysql.com/doc/en/replication-rules.html).
 
 The default values for this option is `yes` so if you don't intend to use it, make sure that there are no replication filters on your slave. Replication filters are rules to make decisions about whether to execute or ignore statements. For your slave, these rules define which statements received from the master needs to be executed or ignored. Now consider a case where you have a filter on your slave that says don't execute any `ALTER` statement for `table_a`. When you do the schema change for `table_a` on master, the slave would never see that change. Eventually, this could cause the replication to fail after the `RENAME` operation. For this reason, the default value for this is `yes`. If you decide to change it to `no`, make yourself aware of the replication filters that you have on your slaves before you get into a situation where replication starts failing for one of your tables.
 
 **recursion-method:** This specifies the methods that the tool uses to find slave hosts. Methods are as follows:
 
-```
+{% highlight bash %}
 METHOD       USES
 ===========  ==================
 processlist  SHOW PROCESSLIST
 hosts        SHOW SLAVE HOSTS
 dsn=DSN      DSNs from a table
 none         Do not find slaves
-```
+{% endhighlight %}
 
 However, for various reasons, your RDS instance might be configured to not give up the correct slave host information to `pt-online-schema-change` as this was the case with our setup. The most concrete way to do this is to create a DSN (Data Source Name) table for `pt-online-schema-change` to read information from. For this, create a table with the following structure:
 
