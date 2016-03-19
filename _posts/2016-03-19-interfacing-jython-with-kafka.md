@@ -347,7 +347,7 @@ jython -J-cp "/Users/rafay/Projects/kafka-jython/libs/*" examples/src/main/pytho
 ```
 You should notice incoming messages from the Kafka producer.
 
-Important note: *One very important mention in context of this post is that Jython threads are always mapped to Java threads. Jython actually lacks the global interpreter lock (GIL), which is an implementation detail of CPython. This means that Jython can actually give you better performance on mult-threaded compute-intensive tasks written in Python. You can read more about it [here](http://www.jython.org/jythonbook/en/1.0/Concurrency.html#no-global-interpreter-lock).*
+**Important note:** *One very important mention in context of this post is that Jython threads are always mapped to Java threads. Jython actually lacks the global interpreter lock (GIL), which is an implementation detail of CPython. This means that Jython can actually give you better performance on mult-threaded compute-intensive tasks written in Python. You can read more about it [here](http://www.jython.org/jythonbook/en/1.0/Concurrency.html#no-global-interpreter-lock).*
 
 
 ### Conslusion
@@ -358,11 +358,10 @@ I think using Jython for coordinated consumption with Kafka 0.8.x is a good idea
 * Your Kafka infrastructure cannot migrate to Kafka 0.9.x (which is a requirement if you want to use new Kafka consumer clients).
 * You have updated your Kafka infrastrcutre to 0.9.x but for some reason, you cannot update your consumers to use the new Kafka consumer client.
 
-I think in the long run, it would be better to just update your Kafka infrastructure to 0.9.x even when it might cause downtime. You would definitely get better support and more features; such as the fact that latest version of `kafka-python` implements the new Kafka consumer client which supports coordinated consumers.
+In the long run, it would be better to just update your Kafka infrastructure to 0.9.x even when it might cause downtime. You would definitely get better support and more features; such as the fact that latest version of `kafka-python` implements the new Kafka consumer client which supports coordinated consumers.
 
 Conclusively, Jython has worked well for this problem. However, I am not aware of how well it would perform	 in a huge scale production environment with several consumers, consumer groups, topics and partitions.
 
 *Note: This post might contain some edits which can be tracked [here](https://github.com/mrafayaleem/mrafayaleem.github.io).*
 
-
-
+---
