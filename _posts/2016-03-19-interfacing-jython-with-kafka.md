@@ -3,6 +3,8 @@ layout: post
 comments: true
 title: Interfacing Jython with Kafka 0.8.x
 ---
+Note: A complementing repository for this post can be found at: [https://github.com/mrafayaleem/kafka-jython](https://github.com/mrafayaleem/kafka-jython)
+
 With the release of Kafka 0.9.0, the consumer API was redesigned to remove the dependency between consumer and Zookeeper. Prior to the 0.9.0 release, Kafka consumer was depenedent on Zookeeper for storing its offsets and the complex rebalancing logic was built right into the "high level" consumer. This was causing a couple of issues which are discussed [here](https://cwiki.apache.org/confluence/display/KAFKA/Kafka+Detailed+Consumer+Coordinator+Design). Due to the issues invloving complex rebalance algoritihm within the consumer, some Kafka clients had no support for "coordinated consumption". Essentially, it means that without "coordinated consumption", you cannot have N consumers within the same consumer group consuming on the same topic which defeats one of the purpose of Kafka; to balance load across multiple consumers. I saw this problem while using `kafka-python 0.9.2` client library with `Kafka 0.8.x`. While I was trying to setup multiple consumers within the same consumer group, I noticed that every message to that topic would be reproduced on each and every consumer within that same group, defeating the purpose of Kafka being used as a traditional queing system with a pool of consumers. The issue has been discussed on [Github](https://github.com/dpkp/kafka-python/issues/199#issuecomment-53052761). 
 
 One of the solution that I managed to figure out without moving away from Python was to use Jython for writing consumers for Kafka 0.8.x.
