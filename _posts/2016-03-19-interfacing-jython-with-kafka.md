@@ -37,7 +37,7 @@ mkvirtualenv -p /jython-installation-path/jython2.7.0/bin/jython -a kafka-jython
 ```
 You should be in the repo directory right now with your `virtualenv` already activated.
 
-The project layout as follows:
+The project layout is as follows:
 
 ```
 .
@@ -92,6 +92,8 @@ We would cover both in a while.
 #### 1 - Write everything in Java and call it directly from Jython
 
 Lets look at some of the code for the consumers. This "high level" consumer example has been borrowed directly from [here](https://cwiki.apache.org/confluence/display/KAFKA/Consumer+Group+Example) so do check it out for a more elaborate explanation.
+
+*Note: For backwards compatibility, Kafka 0.9.1 still supports the high level consumer API.*
 
 `ConsumerTest` class is a runnable that consumes messages from Kafka stream and waits (blocks) for new messages. `ConsumerGroupExample` is the entry point where we specify the number of concurrent consumers (within the same consumer group) to use when consuming a topic.
 
@@ -315,7 +317,7 @@ class HighLevelConsumer(object):
 
 ```
 
-You can see how trivial it is to use libraries and other Java language constructs in Jython. In fact, the code doesn't look any different than traditional Python. However, notice the explicit Java `String` import: `from java.lang import String`. In Java, you never need to do this because `java.lang` is auto-imported.
+You can see how trivial it is to use Java libraries and other Java specific language constructs in Jython. Moreover, the code doesn't look any different from traditional Python. However, notice the explicit Java `String` import: `from java.lang import String`. In Java, you never need to do this because `java.lang` is auto-imported. This is not the case with Jython.
 
 Following is the entry point for the Jython consumer.
 
@@ -347,18 +349,17 @@ jython -J-cp "/Users/rafay/Projects/kafka-jython/libs/*" examples/src/main/pytho
 ```
 You should notice incoming messages from the Kafka producer.
 
-**Important note:** *One very important mention in context of this post is that Jython threads are always mapped to Java threads. Jython actually lacks the global interpreter lock (GIL), which is an implementation detail of CPython. This means that Jython can actually give you better performance on mult-threaded compute-intensive tasks written in Python. You can read more about it [here](http://www.jython.org/jythonbook/en/1.0/Concurrency.html#no-global-interpreter-lock).*
+*Important note: One very important mention in context of this post is that Jython threads are always mapped to Java threads. Jython actually lacks the global interpreter lock (GIL), which is an implementation detail of CPython. This means that Jython can actually give you better performance on mult-threaded compute-intensive tasks written in Python. You can read more about it [here](http://www.jython.org/jythonbook/en/1.0/Concurrency.html#no-global-interpreter-lock).*
 
 
 ### Conslusion
 
 I think using Jython for coordinated consumption with Kafka 0.8.x is a good idea when:
 
-* You cannot move away from Python because of library dependencies.
-* Your Kafka infrastructure cannot migrate to Kafka 0.9.x (which is a requirement if you want to use new Kafka consumer clients).
-* You have updated your Kafka infrastrcutre to 0.9.x but for some reason, you cannot update your consumers to use the new Kafka consumer client.
+* You cannot move away from Python because of library dependencies but you still want the coordinated consumers.
+* Your Kafka infrastructure cannot migrate to Kafka 0.9.x (which is a requirement if you want to use new Kafka consumer clients) and you still want coordinated consumers written in Python.
 
-In the long run, it would be better to just update your Kafka infrastructure to 0.9.x even when it might cause downtime. You would definitely get better support and more features; such as the fact that latest version of `kafka-python` implements the new Kafka consumer client which supports coordinated consumers.
+In the long run, it would be better to just update your Kafka infrastructure to 0.9.x. You would definitely get better support and more features; such as the fact that latest version of `kafka-python` implements the new Kafka consumer client which supports coordinated consumers.
 
 Conclusively, Jython has worked well for this problem. However, I am not aware of how well it would perform	 in a huge scale production environment with several consumers, consumer groups, topics and partitions.
 
