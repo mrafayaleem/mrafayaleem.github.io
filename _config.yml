@@ -7,7 +7,7 @@ permalink:        pretty
 
 # Setup
 title:            Uncanny Recursions
-tagline:          ''
+tagline:          'that happen every now and then!'
 description:      'Currently Software Engineer at <a href="https://dubai.dubizzle.com" target="_blank">dubizzle</a>. Living and enjoying life in Dubai, UAE. Huge nerd who likes playing guitar and is a Clapton fan.</a>'
 url:              http://mrafayaleem.com
 baseurl:          ''
@@ -28,7 +28,7 @@ github:
   repo:           https://github.com/mrafayaleem
 
 social:
-  linkedin:       https://ae.linkedin.com/in/mrafayaleem
+  linkedin:       https://www.linkedin.com/in/mrafayaleem
   twitter:        https://twitter.com/mrafayaleem
 
 gems :
