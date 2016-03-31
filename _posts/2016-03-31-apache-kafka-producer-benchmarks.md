@@ -56,7 +56,7 @@ Results are tabulated below for this case. I was shocked to see such a stark dif
 
 **Results:**
 
- | No. of records sent | records/sec | MB/sec | avg latency (ms) | max latency (ms) | 50th (ms) | 95th (ms) | 99th (ms) | 99.9th (ms)
+| | No. of records sent | records/sec | MB/sec | avg latency (ms) | max latency (ms) | 50th (ms) | 95th (ms) | 99th (ms) | 99.9th (ms) |
 --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 Pure Java | 50000000 | 747417.671943 | 71.28 | 429.34 | 2828.00 | 265 | 1251 | 1817 | 2497
 Java interfaced Jython | 50000000 | 753046.071359 | 71.82 | 310.54 | 2189.00 | 1 | 1416 | 1798 | 1798
@@ -69,7 +69,7 @@ Not surprisingly, *Java* and *Java interfaced Jython* producers fared similarly 
 
 **Results:**
 
- | No. of records sent | records/sec | MB/sec | avg latency (ms) | max latency (ms) | 50th (ms) | 95th (ms) | 99th (ms) | 99.9th (ms)
+| | No. of records sent | records/sec | MB/sec | avg latency (ms) | max latency (ms) | 50th (ms) | 95th (ms) | 99th (ms) | 99.9th (ms) |
 --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 Pure Java | 50000000 | 427051.126561 | 40.73 | 1160.60 | 7428.00 | 459 | 4282 | 6288 | 7266
 Java interfaced Jython | 50000000 | 446791.589595 | 42.61 | 1032.90 | 5925.00 | 219 | 4602 | 5595 | 5852
@@ -83,7 +83,7 @@ Again, *Pure Python* and *Pure Jython* producers showed similar throughput, alth
 
 **Results:**
 
- | No. of records sent | records/sec | MB/sec | avg latency (ms) | max latency (ms) | 50th (ms) | 95th (ms) | 99th (ms) | 99.9th (ms)
+| | No. of records sent | records/sec | MB/sec | avg latency (ms) | max latency (ms) | 50th (ms) | 95th (ms) | 99th (ms) | 99.9th (ms) |
 --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 Pure Java | 50000000 | 205475.511429 | 19.60 | 2502.79 | 11165.00 | 1769 | 6741 | 9492 | 10640
 Java interfaced Jython | 50000000 | 192588.426976 | 18.37 | 2659.39 | 19267.00 | 751 | 9236 | 14518 | 18843
