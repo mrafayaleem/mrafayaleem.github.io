@@ -1,11 +1,11 @@
 ---
 layout: post
 comments: true
-title: Apache Kafka Producer Benchmarks - Java vs Jython vs Python
+title: Apache Kafka Producer Benchmarks - Java vs. Jython vs. Python
 ---
 *v1.0*
 
-*Note: This post is open to suggestions that can help achieve fairer results with these benchmarks. It is a versioned post and I would be incrementing the version if anything related to these benchmarks changes. Changes can be tracked [here](https://github.com/mrafayaleem/mrafayaleem.github.io) as well.*
+*Note: This post is open to suggestions that can help achieve fairer results with these benchmarks. It is a versioned post and I would be incrementing it if anything related to these benchmarks changes. Changes can be tracked [here](https://github.com/mrafayaleem/mrafayaleem.github.io) as well.*
 
 In my [previous](http://mrafayaleem.com/2016/03/19/interfacing-jython-with-kafka/) post, I wrote about how we can interface Jython with Kafka 0.8.x and use Java consumer clients directly with Python code. As a followup to that, I got curious about what would be the performance difference between Java, Jython and Python clients. In this post, I am publishing some of the benchmarks that I have been doing with Java, Jython and Python *producers*. 
 
@@ -16,7 +16,7 @@ All of these benchmarks were run on AWS EC2 instances with the following specifi
 - Three `m4.large` **shared** tenancy Kafka broker servers as a cluster with 128 GiB EBS Magnetic storage each.
 - One `m4.xlarge` **shared** tenancy Zookeeper server for the whole Kafka cluster with 128 GiB EBS Magnetic storage.
 
-I am not aware of any reasons where a Zookeeper cluster would perform significantly better than a single Zookeper server particularly for this configuration, so I went for a single server. For these benchmarks, Zookeer server was also used to run the producers for each language choice.
+I am not aware of any reasons where a Zookeeper cluster would perform significantly better than a single Zookeper server particularly for this configuration, so I went for a single server instead. For these benchmarks, Zookeer server was also used to run the producers for each language choice.
 
 I kept Kafka and Zookeeper server configurations to mostly the default ones defined in `server.properties` and `zookeeper.properties` respectively. In particular, none of the server configurations were tweeked for these benchmarks.
 
@@ -48,7 +48,7 @@ These benchmarks were run for the following cases:
 2. Single producer (single thread) producing asynchronousyly on a topic with replication factor of 3 and 6 partitions.
 3. Single producer (single thread) producing syncronously on a topic with replication factor of 3 and 6 partitions.
 
-In this context, a producer running in **async** mode would mean that the number of acknowledgments the producer requires the leader to have received from its followers before considering a request complete is **0**. **Sync** mode is where the leader would wait on all the followers to acknowledge before acknowledging it to the the producer.
+*In this context, a producer running in **async** mode would mean that the number of acknowledgments the producer requires the leader to have received from its followers before considering a request complete is **0**. **Sync** mode is where the leader would wait on all the followers to acknowledge before acknowledging it to the the producer.*
 
 ## Single producer producing on a topic with no replication and 6 partitions.
 Results are tabulated below for this case. I was shocked to see such a stark difference between `kafka-python` and official Java producer clients. And as expected, *Java* and *Java interfaced  Jython* producers showed very similar results.
@@ -79,7 +79,7 @@ Pure Python | 50000000 | 9845.42251444 | 0.938932658619 | 26.58918002 | 1138.0 |
 ## Single producer producing syncronously on a topic with replication factor of 3 and 6 partitions.
 *For this case, I increased the `batch.size` from `8196` to `64000` for each run to accomodate for sync mode.* 
 
-Again, *Pure Python* and *Pure Jython* producers showed similar throughput, although max latencies are slightly higher than the previous run. It does seem like throughput in this case is mostly limited by code execution or `kafka-python` producer client implementation. Throughput for *Pure Java* and *Java interfaced Jython* has almost halved compared to the previous case which makes sense here as we ran these producers in sync mode.
+Again, *Pure Python* and *Pure Jython* producers showed similar throughput, although max latencies are slightly higher than the previous run. It does seem that throughput in this case is mostly limited by code execution or `kafka-python` producer client implementation. Throughput for *Pure Java* and *Java interfaced Jython* has almost halved compared to the previous case which makes sense here as we ran these producers in sync mode.
 
 **Results:**
 
@@ -91,6 +91,6 @@ Pure Jython | 50000000 | 110700.535126 | 10.5572257162 | 1220.20796466 | 7115.0 
 Pure Python | 49999231 | 9844.45746764 | 0.938840624584 | 39.2650510365 | 2359.0 | 28 | 57 | 452 | 1108
 
 
-You can find everything related to these benchmarks [here](https://github.com/mrafayaleem/kafka-jython/tree/master/benchmarks). I would love to hear some feedback on this post while I am working on publishing results for consumer benchmarks in my upcoming post.
+You can find everything related to these benchmarks [here](https://github.com/mrafayaleem/kafka-jython/tree/master/benchmarks). I would love to hear some feedback on this while I am working on publishing results for consumer benchmarks in my upcoming post.
 
 ---
