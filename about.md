@@ -1,10 +1,9 @@
 ---
 layout: page
 title: About
+permalink: /about/
 ---
 
-<p class="message">
-  To be continued...
-</p>
+I'm Programmer for Python & Django. I've made quite a few web apps, especially on Django. Now, I am doing more on backend.
 
-Thanks for passing by!
+email: agus[at]python.web.id

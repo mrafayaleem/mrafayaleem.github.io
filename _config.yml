@@ -1,35 +1,55 @@
-# Dependencies
-markdown:         kramdown
-highlighter:      rouge
+title: Uncanny Recursions
+description: that happen every now and then!
+author: Rafay Aleem
+github: https://github.com/mrafayaleem
+about: I'm Programmer for Python & Django. I've made quite a few web apps, especially on Django.
+disqus_shortname: stackproblems
+google_analytics: UA-XXXXXXXX-Y
+avatar_url: /static/img/avatar.jpg
 
-# Permalinks
-permalink:        pretty
+enableTags: true
+tagarray: []
 
-# Setup
-title:            Uncanny Recursions
-tagline:          'that happen every now and then!'
-description:      'Currently Software Engineer at <a href="https://dubai.dubizzle.com" target="_blank">dubizzle</a>. Living and enjoying life in Dubai, UAE. Huge nerd who likes playing guitar and is a Clapton fan.</a>'
-url:              http://mrafayaleem.com
-baseurl:          ''
-
-author:
-  name:           'M. Rafay Aleem'
-  url:            https://twitter.com/mrafayaleem
-
-paginate:         5
-
-# Custom vars
-version:          1.0.0
-
-files:
-  resume:         /static_files/mrafayaleem.pdf
-
-github:
-  repo:           https://github.com/mrafayaleem
+collections:
+  project:
+    output: true
+    permalink: /project/:path/
 
 social:
-  linkedin:       https://www.linkedin.com/in/mrafayaleem
-  twitter:        https://twitter.com/mrafayaleem
+    - icon: fa-twitter
+      link: "https://github.com/mrafayaleem"
+    - icon: fa-linkedin
+      link: "#"
+    - icon: fa-stack-exchange
+      link: "#"
+    - icon: fa-github
+      link: "https://github.com/mrafayaleem"
 
-gems :
+share:
+  twitter_username: github.io
+  fb_appid: 1749788565247320
+
+urls:
+    - text: About Me
+      url: /about/
+    - text: My Projects
+      url: /projects/
+    - text: XML Feed
+      url: /feed.xml
+
+url: "https://mrafayaleem.github.io"
+baseurl: ""
+paginate: 20
+per_page: 20
+paginate_path: "/page/:num/"
+markdown: kramdown
+gems:
   - jekyll-paginate
+  - jekyll-gist
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: ['development']
