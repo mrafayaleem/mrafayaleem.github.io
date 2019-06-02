@@ -1,5 +1,5 @@
 title: Uncanny Recursions
-description: that happen every now and then!
+description: Uncanny recursions that happen every now and then!
 author: Rafay Aleem
 github: https://github.com/mrafayaleem
 about: I'm Programmer for Python & Django. I've made quite a few web apps, especially on Django.
@@ -16,18 +16,18 @@ collections:
     permalink: /project/:path/
 
 social:
-    - icon: fa-twitter
-      link: "https://github.com/mrafayaleem"
     - icon: fa-linkedin
-      link: "#"
+      link: "https://www.linkedin.com/in/mrafayaleem/"
+    - icon: fa-twitter
+      link: "https://twitter.com/mrafayaleem"
     - icon: fa-stack-exchange
-      link: "#"
+      link: "https://stackoverflow.com/users/569085/rafay"
     - icon: fa-github
       link: "https://github.com/mrafayaleem"
 
 share:
-  twitter_username: github.io
-  fb_appid: 1749788565247320
+  twitter_username: mrafayaleem
+#  fb_appid: 1749788565247320
 
 urls:
     - text: About Me
