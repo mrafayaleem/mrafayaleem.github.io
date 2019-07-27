@@ -20,7 +20,7 @@ title                    : "Uncanny Recursions"
 title_separator          : "-"
 subtitle                 : "that happen every now and then!"
 name                     : "Muhammad Rafay Aleem"
-description              : "An amazing website."
+description              : "Rafay's personal site."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -109,7 +109,7 @@ analytics:
 author:
   name             : "Rafay Aleem"
   avatar           : "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "I am a techie currently interning as a Data Engineer at [Shopify](https://en.wikipedia.org/wiki/Shopify). Previously worked at [Wiivv](https://wiivv.com/pages/science) and [Dubizzle OLX](https://dubai.dubizzle.com/). Simon Fraser and NUST alumni. I love data."
   location         : "Toronto, ON, Canada"
   email            :
   links:
