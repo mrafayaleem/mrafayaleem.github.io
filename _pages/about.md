@@ -12,7 +12,7 @@ After about 3 years in Dubai, I moved to Vancouver, Canada to work for a startup
 
 Meanwhile, I had always wanted to get closer to "data" so I decided to pursue a Master's in Computer Science with specialization in Big Data in 2018. I will be graduating in December 2019 so I am definitely looking for opportunities in Data Science and Data Engineering domain. I am also currently interning at [Shopify](https://www.shopify.com/) as a Data Engineer.
 
-Besides my work life, I love to play guitar. If you are ambitiously trying to find out more, you will find me on SoundCloud. Some of my favourite artists in no particular order are Eric Clapton, Mark Knopfler, Vital Signs, Junoon, Iron Maiden, Metallica and Pink Floyd.
+Besides my work life, I love to play guitar. If you are ambitiously trying to find out more, you will find me on SoundCloud. Some of my favourite artists in no particular order are Eric Clapton, Mark Knopfler, [Vital Signs](https://sites.google.com/site/vitalsignsfansite/), Junoon, Iron Maiden, Metallica and Pink Floyd.
 
 I also keep on track with Formula 1 news and have a weakness for fast cars. Other sports that I tend to follow is Cricket, Football and Basketball.
 
