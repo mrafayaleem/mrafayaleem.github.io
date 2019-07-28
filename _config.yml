@@ -21,7 +21,7 @@ title_separator          : "-"
 subtitle                 : "that happen every now and then!"
 name                     : "Muhammad Rafay Aleem"
 description              : "Rafay's personal site."
-url                      : "http://mrafayaleem.com"
+url                      : "https://mrafayaleem.com"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "mrafayaleem/mrafayaleem.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -118,7 +118,7 @@ author:
       url: mailto:mrafayaleem at gmail.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "http://mrafayaleem.com"
+      url: "https://mrafayaleem.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/mrafayaleem"
@@ -140,13 +140,19 @@ footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url:
+      url: "https://twitter.com/mrafayaleem"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/mrafayaleem"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/mrafayaleem/"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: mailto:mrafayaleem at gmail.com
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -286,6 +292,13 @@ compress_html:
 
 # Defaults
 defaults:
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
   # _posts
   - scope:
       path: ""
