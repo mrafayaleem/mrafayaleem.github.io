@@ -20,6 +20,6 @@ Ever since I moved to Canada, I have also got very interested in financial marke
 
 These days, I am a bit obsessed with fitness and recently joined Boxfit classes. It's somewhat similar to Crossfit with a lot of boxing. I would highly recommend it.  
 
-If you have read it this far and would like to know more, I would love to grab a coffee. Please feel free to reach me out. All my contact details can be found in this site.
+If you have read it this far and would like to know more, I would love to grab a coffee. Please feel free to reach me out. All my contact details can be found on this site.
 
 Cheers!  
