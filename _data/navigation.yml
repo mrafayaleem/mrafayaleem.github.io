@@ -2,6 +2,8 @@
 main:
   - title: "Resume"
     url: /assets/files/rafay-resume-latest.pdf
+  - title: "Book Notes"
+    url: /booknotes/
   - title: "About Me"
     url: /about/
   # - title: "Sample Posts"
