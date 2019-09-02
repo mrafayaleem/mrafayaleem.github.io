@@ -290,6 +290,13 @@ compress_html:
     envs: development
 
 
+# Collections
+collections:
+  booknotes:
+    output: true
+    permalink: /:collection/:path/
+
+
 # Defaults
 defaults:
   # _pages
@@ -310,3 +317,11 @@ defaults:
       comments: # true
       share: true
       related: true
+  # _booknotes
+  - scope:
+      path: ""
+      type: booknotes
+    values:
+      layout: single
+      author_profile: true
+      share: true
