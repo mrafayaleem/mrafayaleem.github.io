@@ -1,0 +1,81 @@
+==================================================================
+https://keybase.io/mrafayaleem
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://mrafayaleem.com
+  * I am mrafayaleem (https://keybase.io/mrafayaleem) on keybase.
+  * I have a public key with fingerprint B60F D7E5 3A18 8014 0C9C  7A78 5D6F DFDC 6D0E 69CC
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01017faff44b6df0bfa792fb74f94ddfb487b5481090d77625a7710fd1eb72cc0fcb0a",
+      "fingerprint": "b60fd7e53a1880140c9c7a785d6fdfdc6d0e69cc",
+      "host": "keybase.io",
+      "key_id": "5d6fdfdc6d0e69cc",
+      "kid": "01017faff44b6df0bfa792fb74f94ddfb487b5481090d77625a7710fd1eb72cc0fcb0a",
+      "uid": "46ed85b159c785708ce314631d135119",
+      "username": "mrafayaleem"
+    },
+    "merkle_root": {
+      "ctime": 1567538143,
+      "hash_meta": "e2d681694d4046544d93c01c95ef431606fc3640f2b6d3eaf6c202ec5a8b63f1",
+      "seqno": 6161542
+    },
+    "revoke": {
+      "sig_ids": [
+        "66297af2fc2fcab92129810d069b88f3c2829350223be50b9e48b28c3f422f910f"
+      ]
+    },
+    "service": {
+      "hostname": "mrafayaleem.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1567538169,
+  "expire_in": 157680000,
+  "prev": "38c1697cb6ed5b0bc94e5799ab505f255cf2461f57f1d15806322ae14b45392f",
+  "seqno": 7,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.3
+Comment: https://keybase.io/crypto
+
+yMK5AnicrZNraB1FGIZPams1tFrboFKhIas/ShLCzOxcj6KtIlbQoliLoa3LzOxM
+sj2XPe5uThJiVAxtCV6qFMGotCJopRQVrb0QCuFYSmi1IFhpvBwFi1eCGGtBxOBs
+UAT1p8vCsrvv937vPN/MieWXFFpblnlr9t19soe3nG6MDBS2VSd/HfFUHA57xRGv
+ZBYephyaNAtKUegVPQABZFZai7GioQXKSiaQVQxbgcPQKsyZIphDIEDIGEVEMgaB
+DaFRDGkNrFZAet2ejap9JqklUTVztoo6CTPEl5BzADHQQjPJOAmpDW2oaQgMFVq7
+wv44zStcOCVT0xPF7pt7CRbi/Yf+f849sGCHqQk5UZC4mJwwwLXxIaY+DKFPIBS5
+MDVJVVaMU1cSaeWwLBtT8Ua7vYpJSmUTJHGc5Xx1FuUqSCgjPofYd2uUaX9QMZl0
+xQaFlEPqUmKAKcE4FL4GUAtiLPYhBdRqn2JgkVuYb6SlGgFkNJFcUd9CFyU1D1Vj
+r0ghhQQjlyAx9bhk8uZp1OfIpV5xi0cpEkxaZLW7pRIIIuF4hIAKxbn1NeJI+AQg
+5CtDgBIGc4W49i1GyAoHy9s2mjdL6pFeMM9H9W8EPTquuFC1JM5iHZfdz/4sq6XF
+HE02XMvVg0YFf/oEKqqGbq+4irpJ0iiuOlRO+Q9qVHR7ZqgWJSaIcgVhlAN35X1M
+3Vn6XDsR08pNjiigtMCGMCGkIoBYRIi2CFNoCbNuiIQD6iMkDcQKE9/tlL8xMhdT
+9jlLx64qs4HEeKONqa2LCy2thUuXLMrPUKH18hV/nawbty+dh6t7f5bqjck7rt/T
+tXlq7PzjzcIXB45P/nb/xs9qyZuX2bajHn5icPbA1Dfvr39aHGx+1NsY/33XppvB
+6ostxxY1l1792HTprrmJw+Pz9+1oOwY+uPjlh96KvYNfxeMn713b+dLiHx98ZCsp
+X/HToY6u2VM7r/zhzq7pV/c9d813uzZOvP1sY3P/659eWIvWjL/z8WvfN2+9rbf+
+y9RZNPP8+gc2dOzOXgjm968aW35ux8p2NrvuyYkzZ/noo3PB3lcme+ptQ4emz0wn
+zXL7PU9dN/Peix3r8Mtk99efD+7cc9Wyh0/fULlw7anOT47MtK/6du6m4OCJ7Us6
+Gm9NDL17vv2Z2zes7Bzbcu6WOgtnuv8Aks6EhQ==
+=2/ZL
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/mrafayaleem
+
+==================================================================
