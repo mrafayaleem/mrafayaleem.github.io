@@ -45,3 +45,45 @@ Databases
     - Data cubes and materialized views
         - Create cache on disk that computes an aggregate such as SUM. It needs to be updated every time underlying data is updated because it is a denormalized copy of the data. Virtual view is more like stored procedure that executes query on the fly
         - Special case of materialized view is data cube or OLAP cube. Basically, grid of aggregates grouped by different columns. Expensive to compute and rather rigid. Only used as performance boost for certain queries
+        
+Encoding and Evolution
+- Language specific encoding formates
+    - Don’t use
+    - Instantiating arbitrary classes is dangerous (remote code execution)
+- JSON, XML and binary variants
+    - JSON, XML, CSV, BSON, BJSON, UBJSON, BISON
+    - MessagePack (offers little space reduction for JSON)
+- Thrift and Protocol Buffers
+    - Protocol buffers from Google, Thrift from Facebook
+    - Both come with code generation tool that produces classes that implemented schema in various languages
+    - Both require schema for any data that needs to be encoded
+    - Thrift CompactProtocol offers googd compression. Uses variable-length integers
+    - Backward and forward compatibility needs to kept in check
+- Avro
+    - Two schema languages: Avro IDL and one based on JSON
+    - Most compact of all the schemes because it doesn’t have tags
+    - To parse, you go through the fields in order
+    - Offers writer’s schema and reader’s schema
+    - Define schema evolution rules such as fill with null if not present, etc
+    - Some gotchas regarding backward / forward compatibilty such as changing datatype of a field or name of the field
+    - Can’t just include writer’s schema for every record to be read by the reader
+        - Large file with lots of records: Include schema in the beginning of file
+        - DB with individually written records: Include schema version number at the beginning of the record
+        - Sending records over network: Negotiate schema through Avro RPC
+    - Dynamically generated schemas
+        - No tag numbers unline protocol buffers and thrift
+        - Therefore, friendlier to dynamically generated schemas
+        - For eg. schema changes in relational db, you can generate a new Avro schema and dump the file. Schema conversion happens every time it runs and since fields are identified by names, updated writer’s schema can still be matched with old reader’s schema
+        - Can’t do that easity with Thrift or Protocol Buffers
+- Better to use schemas because they can be much more compact as the can omit filed names
+- Good documentation
+- Offers same kind of flexibility as schemaless while also providing better guarantees and better tooling
+- Dataflow through various methods
+    - Through databases, services such as REST and RPC and message-passing dataflow
+    - RPC tries to make a network call look the same as local funciton call
+        - Local function in predictable, network call is not
+        - Network request is much slower than a local function call
+        - Different langauges need to implement translation for datatypes
+        - How to implement non primitive types such as pointers?
+    - REST doesn’t try to hide the fact that it’s a network call
+    - Distributed actor frameworks such as Akka and ErlangOTP
