@@ -1,6 +1,5 @@
 ---
 title: "Designing Data-Intensive Applications"
-size: 1px
 ---
 
 Important points and key learning gathered after reading Designing Data-Intensive Applications. Sorted and summarized by parts and chapters.
