@@ -1,5 +1,5 @@
 ---
-title: "Designing Data-Intensive Applications"
+title: "Designing Data-Intensive Applications (Part 1)"
 ---
 
 Important points and key learning gathered after reading Designing Data-Intensive Applications. Sorted and summarized by parts and chapters.
@@ -8,7 +8,7 @@ Still reading...
 
 Databases
 - Bitcask
-    - Defaul storage engine in Riak
+    - Default storage engine in Riak
 - SSTable (String sorted table)
 - LSM (Log-Structured Merge-Tree)
     - Keeping a cascade of SSTables that are merged in the background
